@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>covExample</title>
+	
+	<script src="example.js" type="text/x-cov-javascript" charset="utf-8"></script>
+	
+	<!-- including cov.js reinserts all scripts of type text/x-cov-javascript as instrumented js -->
+	<script src="../cov.js" type="text/javascript" charset="utf-8"></script>
+	
+	
+	<script src="testlib.js" type="text/javascript" charset="utf-8"></script>
+	
+</head>
+<body>
+	
+	<script type="text/javascript" charset="utf-8">
+	
+	// test the code
+	var menu = new Menu({likesBacon:true});
+
+	expect(menu.food()).toBe('Bacon!');
+	expect(menu.drink()).toBe('Milkshakes');
+
+	expect(f1()).notToBe('problem');
+	expect(f2()).notToBe('problem');
+
+	
+	// display the code coverage
+	_$_cov.report();
+	
+</script>
+
+</body>
+</html>
