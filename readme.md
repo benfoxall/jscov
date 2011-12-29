@@ -6,14 +6,14 @@ The general idea is to convert the js into a format that will track which lines 
 
 ### usage
 
-Include your js files with the type of 'text/x-cov-javascript' and then include cov.js.
+Include your js files with the type of 'text/x-cov-javascript' and then include jscov.js.
 
     <script src="yourcode.js" type="text/x-cov-javascript" charset="utf-8"></script>
-    <script src="cov.js" type="text/javascript" charset="utf-8"></script>
+    <script src="jscov.js" type="text/javascript" charset="utf-8"></script>
 
 This will request 'yourcode.js' via xhr, add markers to the code and re-insert it into a new script tag.
 
-Including this file also gives access to a hacky ui for displaying the files and their coverage, once you've tested your code, call `_$_cov.report();` to display list the js files and their code coverage
+Including this file also gives access to a hacky ui for displaying the files and their coverage, once you've tested your code, call `_$jscov.report();` to display list the js files and their code coverage
 
 ### current limitations
 
