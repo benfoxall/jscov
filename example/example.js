@@ -3,6 +3,12 @@ var Menu = function(prefs){
 };
 
 Menu.prototype.food = function(){
+  var problems = {yup:'couldn\'t',
+      work:'now'};
+      
+  problems.x = 'YO!'
+    
+  
   if(this.prefs.likesBacon){
     return "Bacon!";
   } else {
@@ -14,6 +20,14 @@ Menu.prototype.drink = function(){
   return "Milkshakes";
 };
 
+
+function nevercalled(){
+  
+}
+
+var alsoNeverCalled = function(){
+  
+}
 
 
 // The way that the code is instrumented will mean that 
