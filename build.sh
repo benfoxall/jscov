@@ -1,6 +1,8 @@
 echo ';(function(){' > jscov.js
 
+cat src/_.js >> jscov.js
 cat src/base.js >> jscov.js
+cat src/parser.js >> jscov.js
 cat src/instrument.js >> jscov.js
 cat src/report.js >> jscov.js
 
