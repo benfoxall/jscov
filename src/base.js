@@ -6,11 +6,12 @@ var Jscov = function(){
   };
 }
 
-Jscov.prototype.log = function(key, from, to){
+Jscov.prototype.log = function(key, block){
   if(!this.data.calls[key]){
     this.data.calls[key] = [];
   }
-  this.data.calls[key].push([from, to]);
+  this.data.calls[key].push(block);
+  return false;
 }
 
 // expose jscov
